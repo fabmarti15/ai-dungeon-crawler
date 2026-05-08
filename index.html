@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>üêâ AI Dungeon Crawler</title>
+  <title>&#128009; AI Dungeon Crawler</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
 
@@ -25,7 +25,7 @@
       padding: 30px 20px;
     }
 
-    /* ‚îÄ‚îÄ HEADER ‚îÄ‚îÄ */
+    /* &#9472;&#9472; HEADER &#9472;&#9472; */
     .game-header {
       text-align: center;
       margin-bottom: 30px;
@@ -50,7 +50,7 @@
       margin: 12px 0;
     }
 
-    /* ‚îÄ‚îÄ API KEYS PANEL ‚îÄ‚îÄ */
+    /* &#9472;&#9472; API KEYS PANEL &#9472;&#9472; */
     .keys-panel {
       background: rgba(20,15,5,0.9);
       border: 1px solid #3a2a10;
@@ -101,7 +101,7 @@
     .keys-status.ok { color: #5c9e5c; }
     .keys-status.missing { color: #c04040; }
 
-    /* ‚îÄ‚îÄ STORY BOX ‚îÄ‚îÄ */
+    /* &#9472;&#9472; STORY BOX &#9472;&#9472; */
     .story-container {
       background: rgba(15,12,5,0.95);
       border: 2px solid #3a2a10;
@@ -154,7 +154,7 @@
     }
     @keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0; } }
 
-    /* ‚îÄ‚îÄ STATUS BAR ‚îÄ‚îÄ */
+    /* &#9472;&#9472; STATUS BAR &#9472;&#9472; */
     .status-bar {
       display: flex;
       gap: 20px;
@@ -175,7 +175,7 @@
     .stat-value.hp { color: #c04040; }
     .stat-value.xp { color: #5c9e5c; }
 
-    /* ‚îÄ‚îÄ COMBAT PANEL ‚îÄ‚îÄ */
+    /* &#9472;&#9472; COMBAT PANEL &#9472;&#9472; */
     .combat-panel {
       background: rgba(30,10,5,0.95);
       border: 2px solid #6a1a10;
@@ -214,7 +214,7 @@
       100% { opacity: 0; transform: translate(-50%, -100%) scale(1.5); }
     }
 
-    /* ‚îÄ‚îÄ BUTTONS ‚îÄ‚îÄ */
+    /* &#9472;&#9472; BUTTONS &#9472;&#9472; */
     .action-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
     .btn {
       flex: 1;
@@ -250,7 +250,7 @@
     }
     .btn-icon { margin-right: 8px; }
 
-    /* ‚îÄ‚îÄ LOG ‚îÄ‚îÄ */
+    /* &#9472;&#9472; LOG &#9472;&#9472; */
     .log-section { margin-top: 20px; }
     .log-header {
       font-family: 'Cinzel', serif;
@@ -277,7 +277,7 @@
     .log-entry.voice { color: #404080; }
     .log-entry.error { color: #6a2020; font-style: italic; }
 
-    /* ‚îÄ‚îÄ LOADING ‚îÄ‚îÄ */
+    /* &#9472;&#9472; LOADING &#9472;&#9472; */
     .spinner {
       display: inline-block;
       width: 12px; height: 12px;
@@ -290,7 +290,7 @@
     }
     @keyframes spin { to { transform: rotate(360deg); } }
 
-    /* ‚îÄ‚îÄ TOAST ‚îÄ‚îÄ */
+    /* &#9472;&#9472; TOAST &#9472;&#9472; */
     .toast {
       position: fixed;
       bottom: 30px;
@@ -309,7 +309,7 @@
     }
     .toast.show { transform: translateX(-50%) translateY(0); }
 
-    /* ‚îÄ‚îÄ RESPONSIVE ‚îÄ‚îÄ */
+    /* &#9472;&#9472; RESPONSIVE &#9472;&#9472; */
     @media (max-width: 480px) {
       .game-header h1 { font-size: 2em; }
       .story-container { padding: 20px; }
@@ -322,16 +322,16 @@
 
   <!-- HEADER -->
   <div class="game-header">
-    <h1>üêâ AI Dungeon Crawler</h1>
-    <p>Narrativa generativa ‚Ä¢ Voces con ElevenLabs ‚Ä¢ Combate √©pico</p>
+    <h1>&#128009; AI Dungeon Crawler</h1>
+    <p>Narrativa generativa &#8226; Voces con ElevenLabs &#8226; Combate &#233;pico</p>
     <div class="divider"></div>
   </div>
 
   <!-- API KEYS -->
   <div class="keys-panel">
     <div class="keys-header" onclick="toggleKeys()">
-      <span>‚öôÔ∏è API Keys <span id="keys-indicator" class="keys-status missing">‚Äî No configuradas</span></span>
-      <span class="toggle" id="keys-toggle">‚ñº</span>
+      <span>&#9881;&#65039; API Keys <span id="keys-indicator" class="keys-status missing">&#8212; No configuradas</span></span>
+      <span class="toggle" id="keys-toggle">&#9660;</span>
     </div>
     <div class="keys-body" id="keys-body">
       <div class="key-row">
@@ -342,7 +342,7 @@
         <label>ElevenLabs Key</label>
         <input type="password" id="elevenlabs-key" placeholder="sk-...">
       </div>
-      <button class="save-btn" onclick="saveKeys()">üíæ Guardar Keys</button>
+      <button class="save-btn" onclick="saveKeys()">&#128190; Guardar Keys</button>
     </div>
   </div>
 
@@ -368,16 +368,16 @@
 
   <!-- STORY -->
   <div class="story-container">
-    <div class="story-label">üìú Cr√≥nica del Dungeon</div>
+    <div class="story-label">&#128220; Cr&#243;nica del Dungeon</div>
     <div id="story-text">
-      Pulsa <strong>"Nueva Aventura"</strong> para iniciar tu traves√≠a...<br>
+      Pulsa <strong>"Nueva Aventura"</strong> para iniciar tu traves&#237;a...<br>
       <small style="color:#5a4520; font-size:0.8em;">Configura tus API keys arriba para activar la IA.</small>
     </div>
   </div>
 
   <!-- COMBAT PANEL -->
   <div class="combat-panel" id="combat-panel">
-    <h3>‚öîÔ∏è COMBATE INICIADO</h3>
+    <h3>&#9876;&#65039; COMBATE INICIADO</h3>
     <div class="enemy-name" id="enemy-name">Goblin</div>
     <div class="hp-bar-container">
       <div class="hp-bar-bg">
@@ -390,19 +390,19 @@
   <!-- BUTTONS -->
   <div class="action-buttons">
     <button class="btn primary" id="btn-next" onclick="nextEncounter()">
-      <span class="btn-icon">üìñ</span>Nueva Aventura
+      <span class="btn-icon">&#128214;</span>Nueva Aventura
     </button>
     <button class="btn danger" id="btn-attack" onclick="attack()" disabled>
-      <span class="btn-icon">‚öîÔ∏è</span>Atacar
+      <span class="btn-icon">&#9876;&#65039;</span>Atacar
     </button>
     <button class="btn" id="btn-speak" onclick="speakStory()" disabled>
-      <span class="btn-icon">üéôÔ∏è</span>Narrar Voz
+      <span class="btn-icon">&#127897;&#65039;</span>Narrar Voz
     </button>
   </div>
 
   <!-- LOG -->
   <div class="log-section">
-    <div class="log-header">üìã Registro de Aventuras</div>
+    <div class="log-header">&#128203; Registro de Aventuras</div>
     <div class="log-container" id="log"></div>
   </div>
 
@@ -412,7 +412,7 @@
 <div class="toast" id="toast"></div>
 
 <script>
-// ‚îÄ‚îÄ‚îÄ STATE ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ
+// &#9472;&#9472;&#9472; STATE &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;
 const state = {
   hp: 100, xp: 0, gold: 0, level: 1,
   enemy: null,
@@ -425,12 +425,12 @@ const ENEMY_TYPES = [
   { name: 'Esqueleto',    hp: 25, xp: 15, gold: 8  },
   { name: 'Orco',         hp: 35, xp: 25, gold: 12 },
   { name: 'Troll',        hp: 50, xp: 40, gold: 20 },
-  { name: 'Drag√≥n Menor', hp: 80, xp: 80, gold: 50 },
+  { name: 'Drag&#243;n Menor', hp: 80, xp: 80, gold: 50 },
 ];
 
 const VOICE_ID = '21m00Tcm4TlvDq8ikWAM';
 
-// ‚îÄ‚îÄ‚îÄ KEYS ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ
+// &#9472;&#9472;&#9472; KEYS &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;
 function loadKeys() {
   const ok = document.getElementById('openai-key');
   const el = document.getElementById('elevenlabs-key');
@@ -443,7 +443,7 @@ function saveKeys() {
   localStorage.setItem('openai_key', document.getElementById('openai-key').value.trim());
   localStorage.setItem('elevenlabs_key', document.getElementById('elevenlabs-key').value.trim());
   updateKeysStatus();
-  showToast('‚úÖ Keys guardadas');
+  showToast('&#9989; Keys guardadas');
   toggleKeys();
 }
 
@@ -452,13 +452,13 @@ function updateKeysStatus() {
   const hasEL = !!localStorage.getItem('elevenlabs_key');
   const indicator = document.getElementById('keys-indicator');
   if (hasOpenAI && hasEL) {
-    indicator.textContent = '‚Äî ‚úÖ Listas';
+    indicator.textContent = '&#8212; &#9989; Listas';
     indicator.className = 'keys-status ok';
   } else if (hasOpenAI) {
-    indicator.textContent = '‚Äî Falta ElevenLabs';
+    indicator.textContent = '&#8212; Falta ElevenLabs';
     indicator.className = 'keys-status missing';
   } else {
-    indicator.textContent = '‚Äî No configuradas';
+    indicator.textContent = '&#8212; No configuradas';
     indicator.className = 'keys-status missing';
   }
 }
@@ -470,15 +470,15 @@ function toggleKeys() {
   toggle.classList.toggle('open', open);
 }
 
-// ‚îÄ‚îÄ‚îÄ OPENAI ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ
+// &#9472;&#9472;&#9472; OPENAI &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;
 async function generateStory() {
   const key = localStorage.getItem('openai_key');
   if (!key) return getFallbackStory();
 
   const prompts = [
-    'Genera un encuentro dram√°tico de dungeon en 2-3 oraciones en espa√±ol. Var√≠a entre exploraci√≥n, trampas, monstruos o tesoros. Haz que sea emocionante.',
-    'Describe en 2-3 oraciones un momento √©pico en un calabozo oscuro en espa√±ol. Puede haber combate, misterio o descubrimientos.',
-    'En 2-3 oraciones en espa√±ol, narra lo que le pasa al h√©roe en un dungeon medieval con magia y peligro.',
+    'Genera un encuentro dram&#225;tico de dungeon en 2-3 oraciones en espa&#241;ol. Var&#237;a entre exploraci&#243;n, trampas, monstruos o tesoros. Haz que sea emocionante.',
+    'Describe en 2-3 oraciones un momento &#233;pico en un calabozo oscuro en espa&#241;ol. Puede haber combate, misterio o descubrimientos.',
+    'En 2-3 oraciones en espa&#241;ol, narra lo que le pasa al h&#233;roe en un dungeon medieval con magia y peligro.',
   ];
   const prompt = prompts[Math.floor(Math.random() * prompts.length)];
 
@@ -500,34 +500,34 @@ async function generateStory() {
     const data = await res.json();
     return data.choices[0].message.content.trim();
   } catch (e) {
-    addLog(`‚ö†Ô∏è OpenAI: ${e.message}`, 'error');
+    addLog(`&#9888;&#65039; OpenAI: ${e.message}`, 'error');
     return getFallbackStory();
   }
 }
 
 function getFallbackStory() {
   const stories = [
-    'Las antorchas titilan cuando entras a la c√°mara. Un ruido met√°lico resuena en las sombras... algo se mueve.',
+    'Las antorchas titilan cuando entras a la c&#225;mara. Un ruido met&#225;lico resuena en las sombras... algo se mueve.',
     'Encuentras un antiguo cofre sellado con runas brillantes. Al tocarlo, el suelo tiembla bajo tus pies.',
-    'Un goblin emerge de la oscuridad con una daga oxidada, gru√±endo en su idioma salvaje.',
-    'Los huesos crujiendo te alertan: un esqueleto guerrero bloquea el √∫nico camino hacia adelante.',
-    'El olor a azufre llena el pasillo. Al doblar la esquina, encuentras un troll durmiendo junto a un bot√≠n enorme.',
-    'Una voz susurrante te llama desde detr√°s de un espejo roto. En √©l, ves tu reflejo sonre√≠r solo.',
-    'Escalas por piedras resbaladizas hasta llegar a una sala con un drag√≥n menor enroscado sobre monedas de oro.',
+    'Un goblin emerge de la oscuridad con una daga oxidada, gru&#241;endo en su idioma salvaje.',
+    'Los huesos crujiendo te alertan: un esqueleto guerrero bloquea el &#250;nico camino hacia adelante.',
+    'El olor a azufre llena el pasillo. Al doblar la esquina, encuentras un troll durmiendo junto a un bot&#237;n enorme.',
+    'Una voz susurrante te llama desde detr&#225;s de un espejo roto. En &#233;l, ves tu reflejo sonre&#237;r solo.',
+    'Escalas por piedras resbaladizas hasta llegar a una sala con un drag&#243;n menor enroscado sobre monedas de oro.',
   ];
   return stories[Math.floor(Math.random() * stories.length)];
 }
 
-// ‚îÄ‚îÄ‚îÄ ELEVENLABS ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ
+// &#9472;&#9472;&#9472; ELEVENLABS &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;
 async function speakText(text) {
   const key = localStorage.getItem('elevenlabs_key');
-  if (!key) { addLog('üéôÔ∏è Sin ElevenLabs key ‚Äî voz omitida', 'voice'); return; }
+  if (!key) { addLog('&#127897;&#65039; Sin ElevenLabs key &#8212; voz omitida', 'voice'); return; }
 
   const btn = document.getElementById('btn-speak');
   btn.classList.add('speaking');
   btn.disabled = true;
   btn.innerHTML = '<div class="spinner"></div>Narrando...';
-  addLog('üéôÔ∏è ElevenLabs sintetizando voz...', 'voice');
+  addLog('&#127897;&#65039; ElevenLabs sintetizando voz...', 'voice');
 
   try {
     const res = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${VOICE_ID}`, {
@@ -549,19 +549,19 @@ async function speakText(text) {
     const url = URL.createObjectURL(blob);
     const audio = new Audio(url);
     audio.play();
-    addLog('üéôÔ∏è ¬°Voz reproducida con ElevenLabs!', 'voice');
+    addLog('&#127897;&#65039; &#161;Voz reproducida con ElevenLabs!', 'voice');
     audio.onended = () => URL.revokeObjectURL(url);
 
   } catch (e) {
-    addLog(`‚ö†Ô∏è ElevenLabs: ${e.message}`, 'error');
+    addLog(`&#9888;&#65039; ElevenLabs: ${e.message}`, 'error');
   }
 
   btn.classList.remove('speaking');
   btn.disabled = false;
-  btn.innerHTML = '<span class="btn-icon">üéôÔ∏è</span>Narrar Voz';
+  btn.innerHTML = '<span class="btn-icon">&#127897;&#65039;</span>Narrar Voz';
 }
 
-// ‚îÄ‚îÄ‚îÄ GAME LOGIC ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ
+// &#9472;&#9472;&#9472; GAME LOGIC &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;
 async function nextEncounter() {
   if (state.loading) return;
   state.loading = true;
@@ -584,7 +584,7 @@ async function nextEncounter() {
   state.lastStory = story;
 
   // Detect combat keywords
-  const combatKeywords = ['goblin','esqueleto','orco','troll','drag√≥n','bestia','monstruo','criatura','ataca','combate','enemigo','guerrero','guardia','daga','espada'];
+  const combatKeywords = ['goblin','esqueleto','orco','troll','drag&#243;n','bestia','monstruo','criatura','ataca','combate','enemigo','guerrero','guardia','daga','espada'];
   const hasCombat = combatKeywords.some(k => story.toLowerCase().includes(k));
 
   // Typing effect
@@ -601,7 +601,7 @@ async function nextEncounter() {
   }
   cursor.remove();
 
-  addLog(`üìñ ${story.substring(0, 80)}...`);
+  addLog(`&#128214; ${story.substring(0, 80)}...`);
 
   // Start combat if needed
   if (hasCombat) {
@@ -609,21 +609,21 @@ async function nextEncounter() {
     state.enemy = { ...enemyType, currentHp: enemyType.hp };
     showCombat();
     attackBtn.disabled = false;
-    addLog(`üëπ ¬°${state.enemy.name} aparece! HP: ${state.enemy.hp}`, 'combat');
-    showToast(`‚öîÔ∏è ¬°${state.enemy.name} te ataca!`);
+    addLog(`&#128121; &#161;${state.enemy.name} aparece! HP: ${state.enemy.hp}`, 'combat');
+    showToast(`&#9876;&#65039; &#161;${state.enemy.name} te ataca!`);
   } else {
     hideCombat();
     // Random loot
     if (Math.random() > 0.5) {
       const gold = Math.floor(Math.random() * 15) + 1;
       state.gold += gold;
-      addLog(`üí∞ Encontraste ${gold} piezas de oro!`, 'success');
+      addLog(`&#128176; Encontraste ${gold} piezas de oro!`, 'success');
       updateStats();
     }
   }
 
   btn.disabled = false;
-  btn.innerHTML = '<span class="btn-icon">üìñ</span>Nueva Aventura';
+  btn.innerHTML = '<span class="btn-icon">&#128214;</span>Nueva Aventura';
   speakBtn.disabled = false;
 
   state.loading = false;
@@ -652,21 +652,21 @@ function attack() {
   document.getElementById('enemy-hp-bar').style.width = hpPercent + '%';
   document.getElementById('enemy-hp-text').textContent = `HP: ${state.enemy.currentHp} / ${state.enemy.hp}`;
 
-  addLog(`‚öîÔ∏è Infligiste ${dmg} da√±o al ${state.enemy.name}. Recibiste ${enemyDmg} da√±o.`, 'combat');
+  addLog(`&#9876;&#65039; Infligiste ${dmg} da&#241;o al ${state.enemy.name}. Recibiste ${enemyDmg} da&#241;o.`, 'combat');
   updateStats();
 
   if (state.enemy.currentHp <= 0) {
     // Enemy defeated
     state.xp += state.enemy.xp;
     state.gold += state.enemy.gold;
-    addLog(`‚úÖ ¬°${state.enemy.name} derrotado! +${state.enemy.xp} XP, +${state.enemy.gold} Oro`, 'success');
-    showToast(`üèÜ ¬°${state.enemy.name} eliminado! +${state.enemy.xp} XP`);
+    addLog(`&#9989; &#161;${state.enemy.name} derrotado! +${state.enemy.xp} XP, +${state.enemy.gold} Oro`, 'success');
+    showToast(`&#127942; &#161;${state.enemy.name} eliminado! +${state.enemy.xp} XP`);
 
     // Level up check
     if (state.xp >= state.level * 100) {
       state.level++;
-      showToast(`‚¨ÜÔ∏è ¬°NIVEL ${state.level}!`);
-      addLog(`‚≠ê ¬°Subiste al nivel ${state.level}!`, 'success');
+      showToast(`&#11014;&#65039; &#161;NIVEL ${state.level}!`);
+      addLog(`&#11088; &#161;Subiste al nivel ${state.level}!`, 'success');
     }
 
     state.enemy = null;
@@ -675,16 +675,16 @@ function attack() {
     updateStats();
 
     // Update story
-    document.getElementById('story-text').textContent = `Has derrotado al enemigo. El silencio regresa al dungeon... ¬øQu√© te espera m√°s adelante?`;
+    document.getElementById('story-text').textContent = `Has derrotado al enemigo. El silencio regresa al dungeon... &#191;Qu&#233; te espera m&#225;s adelante?`;
   }
 
   if (state.hp <= 0) {
-    document.getElementById('story-text').textContent = 'üíÄ Has muerto en el dungeon... Tu aventura termina aqu√≠.';
+    document.getElementById('story-text').textContent = '&#128128; Has muerto en el dungeon... Tu aventura termina aqu&#237;.';
     document.getElementById('btn-next').disabled = true;
     document.getElementById('btn-attack').disabled = true;
     document.getElementById('btn-speak').disabled = true;
-    addLog('üíÄ Game Over.', 'combat');
-    showToast('üíÄ Has muerto...');
+    addLog('&#128128; Game Over.', 'combat');
+    showToast('&#128128; Has muerto...');
   }
 }
 
@@ -693,7 +693,7 @@ async function speakStory() {
   await speakText(state.lastStory);
 }
 
-// ‚îÄ‚îÄ‚îÄ UI HELPERS ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ
+// &#9472;&#9472;&#9472; UI HELPERS &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;
 function showCombat() {
   document.getElementById('combat-panel').classList.add('visible');
   document.getElementById('enemy-name').textContent = state.enemy.name;
@@ -733,10 +733,10 @@ function showToast(msg) {
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
-// ‚îÄ‚îÄ‚îÄ INIT ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ
+// &#9472;&#9472;&#9472; INIT &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;
 window.onload = () => {
   loadKeys();
-  addLog('üêâ AI Dungeon Crawler iniciado. Listo para la aventura.');
+  addLog('&#128009; AI Dungeon Crawler iniciado. Listo para la aventura.');
 };
 </script>
 </body>
