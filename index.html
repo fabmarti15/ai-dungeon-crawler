@@ -412,7 +412,7 @@
 <div class="toast" id="toast"></div>
 
 <script>
-// &#9472;&#9472;&#9472; STATE &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;
+// \u2500\u2500\u2500 STATE \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
 const state = {
   hp: 100, xp: 0, gold: 0, level: 1,
   enemy: null,
@@ -425,12 +425,12 @@ const ENEMY_TYPES = [
   { name: 'Esqueleto',    hp: 25, xp: 15, gold: 8  },
   { name: 'Orco',         hp: 35, xp: 25, gold: 12 },
   { name: 'Troll',        hp: 50, xp: 40, gold: 20 },
-  { name: 'Drag&#243;n Menor', hp: 80, xp: 80, gold: 50 },
+  { name: 'Drag\u00f3n Menor', hp: 80, xp: 80, gold: 50 },
 ];
 
 const VOICE_ID = '21m00Tcm4TlvDq8ikWAM';
 
-// &#9472;&#9472;&#9472; KEYS &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;
+// \u2500\u2500\u2500 KEYS \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
 function loadKeys() {
   const ok = document.getElementById('openai-key');
   const el = document.getElementById('elevenlabs-key');
@@ -443,7 +443,7 @@ function saveKeys() {
   localStorage.setItem('openai_key', document.getElementById('openai-key').value.trim());
   localStorage.setItem('elevenlabs_key', document.getElementById('elevenlabs-key').value.trim());
   updateKeysStatus();
-  showToast('&#9989; Keys guardadas');
+  showToast('\u2705 Keys guardadas');
   toggleKeys();
 }
 
@@ -452,13 +452,13 @@ function updateKeysStatus() {
   const hasEL = !!localStorage.getItem('elevenlabs_key');
   const indicator = document.getElementById('keys-indicator');
   if (hasOpenAI && hasEL) {
-    indicator.textContent = '&#8212; &#9989; Listas';
+    indicator.textContent = '\u2014 \u2705 Listas';
     indicator.className = 'keys-status ok';
   } else if (hasOpenAI) {
-    indicator.textContent = '&#8212; Falta ElevenLabs';
+    indicator.textContent = '\u2014 Falta ElevenLabs';
     indicator.className = 'keys-status missing';
   } else {
-    indicator.textContent = '&#8212; No configuradas';
+    indicator.textContent = '\u2014 No configuradas';
     indicator.className = 'keys-status missing';
   }
 }
@@ -470,15 +470,15 @@ function toggleKeys() {
   toggle.classList.toggle('open', open);
 }
 
-// &#9472;&#9472;&#9472; OPENAI &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;
+// \u2500\u2500\u2500 OPENAI \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
 async function generateStory() {
   const key = localStorage.getItem('openai_key');
   if (!key) return getFallbackStory();
 
   const prompts = [
-    'Genera un encuentro dram&#225;tico de dungeon en 2-3 oraciones en espa&#241;ol. Var&#237;a entre exploraci&#243;n, trampas, monstruos o tesoros. Haz que sea emocionante.',
-    'Describe en 2-3 oraciones un momento &#233;pico en un calabozo oscuro en espa&#241;ol. Puede haber combate, misterio o descubrimientos.',
-    'En 2-3 oraciones en espa&#241;ol, narra lo que le pasa al h&#233;roe en un dungeon medieval con magia y peligro.',
+    'Genera un encuentro dram\u00e1tico de dungeon en 2-3 oraciones en espa\u00f1ol. Var\u00eda entre exploraci\u00f3n, trampas, monstruos o tesoros. Haz que sea emocionante.',
+    'Describe en 2-3 oraciones un momento \u00e9pico en un calabozo oscuro en espa\u00f1ol. Puede haber combate, misterio o descubrimientos.',
+    'En 2-3 oraciones en espa\u00f1ol, narra lo que le pasa al h\u00e9roe en un dungeon medieval con magia y peligro.',
   ];
   const prompt = prompts[Math.floor(Math.random() * prompts.length)];
 
@@ -500,34 +500,34 @@ async function generateStory() {
     const data = await res.json();
     return data.choices[0].message.content.trim();
   } catch (e) {
-    addLog(`&#9888;&#65039; OpenAI: ${e.message}`, 'error');
+    addLog(`\u26a0\ufe0f OpenAI: ${e.message}`, 'error');
     return getFallbackStory();
   }
 }
 
 function getFallbackStory() {
   const stories = [
-    'Las antorchas titilan cuando entras a la c&#225;mara. Un ruido met&#225;lico resuena en las sombras... algo se mueve.',
+    'Las antorchas titilan cuando entras a la c\u00e1mara. Un ruido met\u00e1lico resuena en las sombras... algo se mueve.',
     'Encuentras un antiguo cofre sellado con runas brillantes. Al tocarlo, el suelo tiembla bajo tus pies.',
-    'Un goblin emerge de la oscuridad con una daga oxidada, gru&#241;endo en su idioma salvaje.',
-    'Los huesos crujiendo te alertan: un esqueleto guerrero bloquea el &#250;nico camino hacia adelante.',
-    'El olor a azufre llena el pasillo. Al doblar la esquina, encuentras un troll durmiendo junto a un bot&#237;n enorme.',
-    'Una voz susurrante te llama desde detr&#225;s de un espejo roto. En &#233;l, ves tu reflejo sonre&#237;r solo.',
-    'Escalas por piedras resbaladizas hasta llegar a una sala con un drag&#243;n menor enroscado sobre monedas de oro.',
+    'Un goblin emerge de la oscuridad con una daga oxidada, gru\u00f1endo en su idioma salvaje.',
+    'Los huesos crujiendo te alertan: un esqueleto guerrero bloquea el \u00fanico camino hacia adelante.',
+    'El olor a azufre llena el pasillo. Al doblar la esquina, encuentras un troll durmiendo junto a un bot\u00edn enorme.',
+    'Una voz susurrante te llama desde detr\u00e1s de un espejo roto. En \u00e9l, ves tu reflejo sonre\u00edr solo.',
+    'Escalas por piedras resbaladizas hasta llegar a una sala con un drag\u00f3n menor enroscado sobre monedas de oro.',
   ];
   return stories[Math.floor(Math.random() * stories.length)];
 }
 
-// &#9472;&#9472;&#9472; ELEVENLABS &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;
+// \u2500\u2500\u2500 ELEVENLABS \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
 async function speakText(text) {
   const key = localStorage.getItem('elevenlabs_key');
-  if (!key) { addLog('&#127897;&#65039; Sin ElevenLabs key &#8212; voz omitida', 'voice'); return; }
+  if (!key) { addLog('\ud83c\udf99\ufe0f Sin ElevenLabs key \u2014 voz omitida', 'voice'); return; }
 
   const btn = document.getElementById('btn-speak');
   btn.classList.add('speaking');
   btn.disabled = true;
   btn.innerHTML = '<div class="spinner"></div>Narrando...';
-  addLog('&#127897;&#65039; ElevenLabs sintetizando voz...', 'voice');
+  addLog('\ud83c\udf99\ufe0f ElevenLabs sintetizando voz...', 'voice');
 
   try {
     const res = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${VOICE_ID}`, {
@@ -549,19 +549,19 @@ async function speakText(text) {
     const url = URL.createObjectURL(blob);
     const audio = new Audio(url);
     audio.play();
-    addLog('&#127897;&#65039; &#161;Voz reproducida con ElevenLabs!', 'voice');
+    addLog('\ud83c\udf99\ufe0f \u00a1Voz reproducida con ElevenLabs!', 'voice');
     audio.onended = () => URL.revokeObjectURL(url);
 
   } catch (e) {
-    addLog(`&#9888;&#65039; ElevenLabs: ${e.message}`, 'error');
+    addLog(`\u26a0\ufe0f ElevenLabs: ${e.message}`, 'error');
   }
 
   btn.classList.remove('speaking');
   btn.disabled = false;
-  btn.innerHTML = '<span class="btn-icon">&#127897;&#65039;</span>Narrar Voz';
+  btn.innerHTML = '<span class="btn-icon">\ud83c\udf99\ufe0f</span>Narrar Voz';
 }
 
-// &#9472;&#9472;&#9472; GAME LOGIC &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;
+// \u2500\u2500\u2500 GAME LOGIC \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
 async function nextEncounter() {
   if (state.loading) return;
   state.loading = true;
@@ -584,7 +584,7 @@ async function nextEncounter() {
   state.lastStory = story;
 
   // Detect combat keywords
-  const combatKeywords = ['goblin','esqueleto','orco','troll','drag&#243;n','bestia','monstruo','criatura','ataca','combate','enemigo','guerrero','guardia','daga','espada'];
+  const combatKeywords = ['goblin','esqueleto','orco','troll','drag\u00f3n','bestia','monstruo','criatura','ataca','combate','enemigo','guerrero','guardia','daga','espada'];
   const hasCombat = combatKeywords.some(k => story.toLowerCase().includes(k));
 
   // Typing effect
@@ -601,7 +601,7 @@ async function nextEncounter() {
   }
   cursor.remove();
 
-  addLog(`&#128214; ${story.substring(0, 80)}...`);
+  addLog(`\ud83d\udcd6 ${story.substring(0, 80)}...`);
 
   // Start combat if needed
   if (hasCombat) {
@@ -609,21 +609,21 @@ async function nextEncounter() {
     state.enemy = { ...enemyType, currentHp: enemyType.hp };
     showCombat();
     attackBtn.disabled = false;
-    addLog(`&#128121; &#161;${state.enemy.name} aparece! HP: ${state.enemy.hp}`, 'combat');
-    showToast(`&#9876;&#65039; &#161;${state.enemy.name} te ataca!`);
+    addLog(`\ud83d\udc79 \u00a1${state.enemy.name} aparece! HP: ${state.enemy.hp}`, 'combat');
+    showToast(`\u2694\ufe0f \u00a1${state.enemy.name} te ataca!`);
   } else {
     hideCombat();
     // Random loot
     if (Math.random() > 0.5) {
       const gold = Math.floor(Math.random() * 15) + 1;
       state.gold += gold;
-      addLog(`&#128176; Encontraste ${gold} piezas de oro!`, 'success');
+      addLog(`\ud83d\udcb0 Encontraste ${gold} piezas de oro!`, 'success');
       updateStats();
     }
   }
 
   btn.disabled = false;
-  btn.innerHTML = '<span class="btn-icon">&#128214;</span>Nueva Aventura';
+  btn.innerHTML = '<span class="btn-icon">\ud83d\udcd6</span>Nueva Aventura';
   speakBtn.disabled = false;
 
   state.loading = false;
@@ -652,21 +652,21 @@ function attack() {
   document.getElementById('enemy-hp-bar').style.width = hpPercent + '%';
   document.getElementById('enemy-hp-text').textContent = `HP: ${state.enemy.currentHp} / ${state.enemy.hp}`;
 
-  addLog(`&#9876;&#65039; Infligiste ${dmg} da&#241;o al ${state.enemy.name}. Recibiste ${enemyDmg} da&#241;o.`, 'combat');
+  addLog(`\u2694\ufe0f Infligiste ${dmg} da\u00f1o al ${state.enemy.name}. Recibiste ${enemyDmg} da\u00f1o.`, 'combat');
   updateStats();
 
   if (state.enemy.currentHp <= 0) {
     // Enemy defeated
     state.xp += state.enemy.xp;
     state.gold += state.enemy.gold;
-    addLog(`&#9989; &#161;${state.enemy.name} derrotado! +${state.enemy.xp} XP, +${state.enemy.gold} Oro`, 'success');
-    showToast(`&#127942; &#161;${state.enemy.name} eliminado! +${state.enemy.xp} XP`);
+    addLog(`\u2705 \u00a1${state.enemy.name} derrotado! +${state.enemy.xp} XP, +${state.enemy.gold} Oro`, 'success');
+    showToast(`\ud83c\udfc6 \u00a1${state.enemy.name} eliminado! +${state.enemy.xp} XP`);
 
     // Level up check
     if (state.xp >= state.level * 100) {
       state.level++;
-      showToast(`&#11014;&#65039; &#161;NIVEL ${state.level}!`);
-      addLog(`&#11088; &#161;Subiste al nivel ${state.level}!`, 'success');
+      showToast(`\u2b06\ufe0f \u00a1NIVEL ${state.level}!`);
+      addLog(`\u2b50 \u00a1Subiste al nivel ${state.level}!`, 'success');
     }
 
     state.enemy = null;
@@ -675,16 +675,16 @@ function attack() {
     updateStats();
 
     // Update story
-    document.getElementById('story-text').textContent = `Has derrotado al enemigo. El silencio regresa al dungeon... &#191;Qu&#233; te espera m&#225;s adelante?`;
+    document.getElementById('story-text').textContent = `Has derrotado al enemigo. El silencio regresa al dungeon... \u00bfQu\u00e9 te espera m\u00e1s adelante?`;
   }
 
   if (state.hp <= 0) {
-    document.getElementById('story-text').textContent = '&#128128; Has muerto en el dungeon... Tu aventura termina aqu&#237;.';
+    document.getElementById('story-text').textContent = '\ud83d\udc80 Has muerto en el dungeon... Tu aventura termina aqu\u00ed.';
     document.getElementById('btn-next').disabled = true;
     document.getElementById('btn-attack').disabled = true;
     document.getElementById('btn-speak').disabled = true;
-    addLog('&#128128; Game Over.', 'combat');
-    showToast('&#128128; Has muerto...');
+    addLog('\ud83d\udc80 Game Over.', 'combat');
+    showToast('\ud83d\udc80 Has muerto...');
   }
 }
 
@@ -693,7 +693,7 @@ async function speakStory() {
   await speakText(state.lastStory);
 }
 
-// &#9472;&#9472;&#9472; UI HELPERS &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;
+// \u2500\u2500\u2500 UI HELPERS \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
 function showCombat() {
   document.getElementById('combat-panel').classList.add('visible');
   document.getElementById('enemy-name').textContent = state.enemy.name;
@@ -733,10 +733,10 @@ function showToast(msg) {
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
-// &#9472;&#9472;&#9472; INIT &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;
+// \u2500\u2500\u2500 INIT \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
 window.onload = () => {
   loadKeys();
-  addLog('&#128009; AI Dungeon Crawler iniciado. Listo para la aventura.');
+  addLog('\ud83d\udc09 AI Dungeon Crawler iniciado. Listo para la aventura.');
 };
 </script>
 </body>
